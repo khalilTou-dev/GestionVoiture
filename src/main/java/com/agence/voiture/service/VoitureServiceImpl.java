@@ -4,6 +4,8 @@ import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import com.agence.voiture.entities.Voiture;
@@ -49,6 +51,13 @@ public class VoitureServiceImpl implements VoitureService {
 	public List<Voiture> getAllVoitures() {
 		// TODO Auto-generated method stub
 		return VoitureRepository.findAll();
+	}
+
+	
+
+	@Override
+	public Page<Voiture> getAllVoituresParPage(int page, int size) {
+		return VoitureRepository.findAll(PageRequest.of(page, size));
 	}
 
 }

@@ -2,6 +2,8 @@ package com.agence.voiture.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+
 import com.agence.voiture.entities.Voiture;
 
 public interface VoitureService {
@@ -11,5 +13,6 @@ public interface VoitureService {
 	void deleteVoitureById(String id);
 	Voiture getVoiture(String id);
 	List<Voiture> getAllVoitures();
+	Page<Voiture> getAllVoituresParPage(int page, int size);
 
 }
