@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Voiture {
@@ -12,6 +13,8 @@ public class Voiture {
 	private String marqueVoit;
 	private Double prixVoit;
 	private Date dateRelease;
+	@ManyToOne
+	private Agence agence;
 	
 	
 	public Voiture(String matriculeVoit, String marqueVoit, Double prixVoit, Date dateRelease) {

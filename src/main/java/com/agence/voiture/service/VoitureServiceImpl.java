@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import com.agence.voiture.entities.Agence;
 import com.agence.voiture.entities.Voiture;
 import com.agence.voiture.repos.VoitureRepository;
 
@@ -58,6 +59,48 @@ public class VoitureServiceImpl implements VoitureService {
 	@Override
 	public Page<Voiture> getAllVoituresParPage(int page, int size) {
 		return VoitureRepository.findAll(PageRequest.of(page, size));
+	}
+
+	@Override
+	public List<Voiture> findByMarqueVoitContains(String nom) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Voiture> findByMarquePrix(String marque, Double prix) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Voiture> findByAgence(Agence agence) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Voiture> findByAgenceIdAge(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Voiture> findByOrderByMarqueVoitAsc() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Voiture> findByMarqueVoit(String nom) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Voiture> trierVoituresMarquePrix() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
