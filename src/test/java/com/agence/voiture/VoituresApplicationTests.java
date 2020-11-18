@@ -44,7 +44,6 @@ class VoituresApplicationTests {
 	@Test
 	public void testDeleteVoiture() {
 		voitureRepository.deleteById("210 Tunis 510");
-		;
 	}
 
 	@Test

@@ -13,6 +13,7 @@ public class Voiture {
 	private String marqueVoit;
 	private Double prixVoit;
 	private Date dateRelease;
+	
 	@ManyToOne
 	private Agence agence;
 	

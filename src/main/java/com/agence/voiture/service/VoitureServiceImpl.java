@@ -60,6 +60,7 @@ public class VoitureServiceImpl implements VoitureService {
 	public Page<Voiture> getAllVoituresParPage(int page, int size) {
 		return VoitureRepository.findAll(PageRequest.of(page, size));
 	}
+	
 
 	@Override
 	public List<Voiture> findByMarqueVoitContains(String nom) {
@@ -82,7 +83,7 @@ public class VoitureServiceImpl implements VoitureService {
 	@Override
 	public List<Voiture> findByAgenceIdAge(Long id) {
 		// TODO Auto-generated method stub
-		return null;
+		return VoitureRepository.findByAgenceIdAge(id);
 	}
 
 	@Override
@@ -102,5 +103,7 @@ public class VoitureServiceImpl implements VoitureService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }
